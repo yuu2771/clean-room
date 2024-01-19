@@ -19,3 +19,8 @@ class Area < ActiveHash::Base
     { id: 17, name: 'ベット周り' },
     { id: 18, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+
+end

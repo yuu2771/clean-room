@@ -19,3 +19,8 @@ class Room < ActiveHash::Base
     { id: 17, name: 'トイレ' },
     { id: 18, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+
+end

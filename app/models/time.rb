@@ -14,3 +14,8 @@ class Time < ActiveHash::Base
     { id: 12, name: '55分' },
     { id: 13, name: '1時間以上' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+
+end
