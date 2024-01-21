@@ -1,0 +1,8 @@
+<%= form_with model: @item, url: clean_rooms_path, local: true do |f| %>
+  <div class="item-box">
+    部屋を選択してください
+    <%= f.collection_select(:room_id, Room.all, :id, :name, {}, {class:"room-select"}) %>
+    <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"area-select"}) %>
+    <%= f.collection_select(:work_time_id, WorkTime.all, :id, :name, {}, {class:"time-select"}) %>
+  </div>
+<% end %>
